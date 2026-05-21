@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AwareBhutan Login</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(to right, #0b6e4f, #00a884);
+    }
+
+    .container{
+      background:white;
+      padding:40px;
+      width:360px;
+      border-radius:12px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.2);
+      text-align:center;
+    }
+
+    h1{
+      color:#0b6e4f;
+      margin-bottom:10px;
+    }
+
+    p{
+      color:#555;
+      margin-bottom:20px;
+    }
+
+    input{
+      width:100%;
+      padding:12px;
+      margin:10px 0;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:16px;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      margin-top:15px;
+      background:#00a884;
+      color:white;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#008f72;
+    }
+
+    .register{
+      margin-top:20px;
+      font-size:14px;
+    }
+
+    .register a{
+      color:#00a884;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .register a:hover{
+      text-decoration:underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>AwareBhutan</h1>
+    <p>Login or create an account</p>
+
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <input type="password" id="password" placeholder="Enter your password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="register">
+      Don't have an account?
+      <a href="#" onclick="registerUser()">Register</a>
+    </div>
+
+  </div>
+
+  <script>
+    // LOGIN FUNCTION
+    document.getElementById("loginForm").addEventListener("submit", function(event){
+      event.preventDefault();
+
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+
+      // Check if account exists
+      let savedEmail = localStorage.getItem("userEmail");
+      let savedPassword = localStorage.getItem("userPassword");
+
+      if(email === savedEmail && password === savedPassword){
+        alert("Login successful! Welcome to AwareBhutan.");
+        
+        // Redirect to homepage
+        window.location.href = "index.html";
+
+      } else {
+        alert("You have not registered yet. Please create an account first.");
+      }
+    });
+
+    // REGISTER FUNCTION
+    function registerUser(){
+
+      let newEmail = prompt("Enter your email to register:");
+      let newPassword = prompt("Create a password:");
+
+      if(newEmail && newPassword){
+
+        // Save account in browser
+        localStorage.setItem("userEmail", newEmail);
+        localStorage.setItem("userPassword", newPassword);
+
+        alert("Account created successfully! You can now login.");
+      }
+      else{
+        alert("Registration cancelled.");
+      }
+    }
+  </script>
+
+</body>
+</html>

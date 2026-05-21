@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Symptoms & Quizzes | AwareBhutan</title>
+
+  <!-- FAVICON -->
+
+  <link rel="shortcut icon"
+        href="image/awarebhutan-logo.png"
+        type="image/png">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f9f8;
+      color:#222;
+      line-height:1.6;
+    }
+
+    /* HEADER */
+
+    header{
+      background:#0b6e4f;
+      color:white;
+
+      padding:20px 10%;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    /* LOGO */
+
+    .logo-container{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .logo-text{
+      font-size:28px;
+      font-weight:bold;
+      color:white;
+    }
+
+    /* NAVIGATION */
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#90ffd9;
+    }
+
+    /* HERO */
+
+    .hero{
+      height:45vh;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1493836512294-502baa1986e2?q=80&w=1200')
+      center/cover;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+
+      color:white;
+    }
+
+    .hero h2{
+      font-size:48px;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:70px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:40px;
+      color:#0b6e4f;
+      font-size:36px;
+    }
+
+    /* CARDS */
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+    }
+
+    .card h3{
+      color:#00a884;
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .card p{
+      font-size:17px;
+    }
+
+    /* QUIZ BOX */
+
+    .quiz-box{
+      background:#dff6ef;
+      padding:35px;
+      border-radius:15px;
+      text-align:center;
+      margin-top:40px;
+    }
+
+    .quiz-box h2{
+      margin-bottom:15px;
+      color:#0b6e4f;
+    }
+
+    /* BUTTON */
+
+    .btn{
+      display:inline-block;
+
+      padding:14px 28px;
+
+      background:#00a884;
+
+      color:white;
+
+      text-decoration:none;
+
+      border-radius:8px;
+
+      margin-top:20px;
+
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#008f72;
+      transform:scale(1.05);
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0b6e4f;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      nav{
+        margin-top:10px;
+      }
+
+      .hero h2{
+        font-size:34px;
+      }
+
+      .logo{
+        width:50px;
+        height:50px;
+      }
+
+      .logo-text{
+        font-size:22px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo-container">
+
+      <img src="image/awarebhutan-logo.png"
+           alt="AwareBhutan Logo"
+           class="logo">
+
+      <span class="logo-text">
+
+        AwareBhutan
+
+      </span>
+
+    </div>
+
+    <nav>
+
+     <a href="index.html">Home</a>
+
+      <a href="about.html">About</a>
+
+      <a href="symptoms.html">Symptoms</a>
+
+      <a href="quiz.html">Quiz</a>
+
+      <a href="emergancy.html">Emergency</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div>
+
+      <h2>Symptoms & Self-Check Quizzes</h2>
+
+    </div>
+
+  </section>
+
+  <!-- MAIN SECTION -->
+
+  <section>
+
+    <h2 class="section-title">
+
+      Common Symptoms
+
+    </h2>
+
+    <div class="cards">
+
+      <!-- CARD 1 -->
+
+      <div class="card">
+
+        <h3>Anxiety</h3>
+
+        <p>
+
+          • Constant worrying<br>
+          • Nervousness<br>
+          • Panic feelings<br>
+          • Trouble sleeping
+
+        </p>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="card">
+
+        <h3>Depression</h3>
+
+        <p>
+
+          • Sadness<br>
+          • Low energy<br>
+          • Hopeless feelings<br>
+          • Loss of interest
+
+        </p>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="card">
+
+        <h3>Stress</h3>
+
+        <p>
+
+          • Irritation<br>
+          • Headaches<br>
+          • Feeling overwhelmed<br>
+          • Difficulty focusing
+
+        </p>
+
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="card">
+
+        <h3>Social Isolation</h3>
+
+        <p>
+
+          • Avoiding others<br>
+          • Loneliness<br>
+          • Fear of social situations<br>
+          • Emotional withdrawal
+
+        </p>
+
+      </div>
+<!-- CARD 5 -->
+
+<div class="card">
+
+  <h3>Burnout</h3>
+
+  <p>
+
+    • Constant exhaustion<br>
+    • Lack of motivation<br>
+    • Feeling emotionally drained<br>
+    • Difficulty completing tasks
+
+  </p>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="card">
+
+  <h3>Low Self-Esteem</h3>
+
+  <p>
+
+    • Negative self-talk<br>
+    • Feeling not good enough<br>
+    • Fear of failure<br>
+    • Lack of confidence
+
+  </p>
+
+</div>
+    </div>
+
+    <!-- QUIZ SECTION -->
+
+    <div class="quiz-box">
+
+      <h2>
+
+        Take Mental Wellness Quizzes
+
+      </h2>
+
+      <p>
+
+        These quizzes help you understand your emotional wellbeing.
+        They are NOT medical diagnoses.
+
+      </p>
+
+      <a href="quiz.html"
+         class="btn">
+
+         Start Quiz
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+
+      © 2026 AwareBhutan | Mental Wellness Support for Bhutan
+
+    </p>
+
+  </footer>
+
+</body>
+
+</html>

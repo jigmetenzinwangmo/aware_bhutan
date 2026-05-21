@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Wellness Results | AwareBhutan</title>
+
+  <!-- FAVICON -->
+
+  <link rel="shortcut icon"
+        href="image/awarebhutan-logo.png"
+        type="image/png">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f9f8;
+      color:#222;
+      line-height:1.6;
+    }
+
+    /* HEADER */
+
+    header{
+      background:#0b6e4f;
+      color:white;
+
+      padding:20px 10%;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    /* LOGO */
+
+    .logo-container{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .logo-text{
+      font-size:28px;
+      font-weight:bold;
+      color:white;
+    }
+
+    /* NAVIGATION */
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#90ffd9;
+    }
+
+    /* MAIN */
+
+    .container{
+      max-width:900px;
+      margin:auto;
+      padding:50px 20px;
+    }
+
+    h1{
+      text-align:center;
+      color:#0b6e4f;
+      margin-bottom:30px;
+      font-size:42px;
+    }
+
+    /* RESULT BOX */
+
+    .result-box{
+      background:white;
+
+      padding:35px;
+
+      border-radius:15px;
+
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+      line-height:1.8;
+    }
+
+    .result-box h2{
+      color:#00a884;
+      margin-bottom:15px;
+      font-size:32px;
+    }
+
+    .result-box p{
+      font-size:18px;
+      margin-bottom:15px;
+    }
+
+    ul{
+      margin-top:10px;
+      padding-left:20px;
+    }
+
+    li{
+      margin-bottom:10px;
+      font-size:17px;
+    }
+
+    /* TIP BOX */
+
+    .tip-box{
+      background:#dff6ef;
+
+      padding:25px;
+
+      border-left:6px solid #00a884;
+
+      border-radius:10px;
+
+      margin-top:25px;
+    }
+
+    .tip-box h3{
+      margin-bottom:15px;
+      color:#0b6e4f;
+    }
+
+    /* BUTTON */
+
+    .center{
+      text-align:center;
+    }
+
+    button{
+      padding:14px 28px;
+
+      background:#00a884;
+
+      color:white;
+
+      border:none;
+
+      border-radius:8px;
+
+      cursor:pointer;
+
+      font-size:17px;
+
+      margin-top:30px;
+
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#008f72;
+      transform:scale(1.05);
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0b6e4f;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:50px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      nav{
+        margin-top:10px;
+      }
+
+      h1{
+        font-size:32px;
+      }
+
+      .logo{
+        width:50px;
+        height:50px;
+      }
+
+      .logo-text{
+        font-size:22px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo-container">
+
+      <img src="image/awarebhutan-logo.png"
+           alt="AwareBhutan Logo"
+           class="logo">
+
+      <span class="logo-text">
+
+        AwareBhutan
+
+      </span>
+
+    </div>
+
+    <nav>
+
+      <<a href="index.html">Home</a>
+
+      <a href="about.html">About</a>
+
+      <a href="symptoms.html">Symptoms</a>
+
+      <a href="quiz.html">Quiz</a>
+
+      <a href="emergancy.html">Emergency</a>
+    </nav>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+
+  <div class="container">
+
+    <h1>Your Wellness Result</h1>
+
+    <div class="result-box"
+         id="resultBox">
+
+    </div>
+
+    <div class="center">
+
+      <button onclick="goBack()">
+
+        Retake Quiz
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+
+      © 2026 AwareBhutan | Mental Wellness Support for Bhutan
+
+    </p>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    let score = Number(localStorage.getItem("quizScore"));
+
+    let resultBox = document.getElementById("resultBox");
+
+    // LOW SCORE
+
+    if(score <= 3){
+
+      resultBox.innerHTML = `
+
+        <h2>Healthy Balance 💚</h2>
+
+        <p>
+
+          Your responses suggest that you are managing your daily wellness fairly well.
+
+        </p>
+
+        <div class="tip-box">
+
+          <h3>Keep Supporting Your Wellness</h3>
+
+          <ul>
+
+            <li>Continue getting enough sleep</li>
+
+            <li>Stay active and exercise regularly</li>
+
+            <li>Spend time with supportive friends and family</li>
+
+            <li>Take breaks and enjoy hobbies</li>
+
+            <li>Maintain healthy eating habits</li>
+
+          </ul>
+
+        </div>
+
+      `;
+    }
+
+    // MODERATE SCORE
+
+    else if(score <= 7){
+
+      resultBox.innerHTML = `
+
+        <h2>Moderate Stress ⚠️</h2>
+
+        <p>
+
+          You may be experiencing some stress or emotional exhaustion from daily life.
+
+        </p>
+
+        <div class="tip-box">
+
+          <h3>Helpful Ways to Recharge</h3>
+
+          <ul>
+
+            <li>Take short breaks during busy days</li>
+
+            <li>Practice deep breathing or mindfulness</li>
+
+            <li>Talk with someone you trust</li>
+
+            <li>Reduce screen time before sleeping</li>
+
+            <li>Spend time outdoors or in nature</li>
+
+            <li>Listen to calming music or journal your thoughts</li>
+
+          </ul>
+
+        </div>
+
+      `;
+    }
+
+    // HIGH SCORE
+
+    else{
+
+      resultBox.innerHTML = `
+
+        <h2>High Stress Level 🔴</h2>
+
+        <p>
+
+          Your responses suggest that you may need extra emotional support and rest.
+
+        </p>
+
+        <div class="tip-box">
+
+          <h3>Important Wellness Steps</h3>
+
+          <ul>
+
+            <li>Talk to a trusted adult, friend, or counselor</li>
+
+            <li>Focus on proper sleep and hydration</li>
+
+            <li>Try relaxation exercises daily</li>
+
+            <li>Do not isolate yourself from supportive people</li>
+
+            <li>Break large tasks into smaller steps</li>
+
+            <li>Seek professional help if stress continues for a long time</li>
+
+          </ul>
+
+          <p>
+
+            Remember: taking care of your mental wellness is important and asking for support is a healthy step.
+
+          </p>
+
+        </div>
+
+      `;
+    }
+
+    // RETAKE BUTTON
+
+    function goBack(){
+
+      window.location.href = "quiz.html";
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>About | AwareBhutan</title>
+
+  <!-- FAVICON -->
+
+  <link rel="shortcut icon"
+        href="image/awarebhutan-logo.png"
+        type="image/png">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f9f8;
+      color:#222;
+      line-height:1.7;
+    }
+
+    /* HEADER */
+
+    header{
+      background:#0b6e4f;
+      color:white;
+
+      padding:20px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    /* LOGO */
+
+    .logo-container{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .logo-text{
+      font-size:26px;
+      font-weight:bold;
+      color:white;
+    }
+
+    /* NAVIGATION */
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:18px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#90ffd9;
+    }
+
+    /* HERO */
+
+    .hero{
+      background:
+      linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400')
+      center/cover;
+
+      height:45vh;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      text-align:center;
+
+      color:white;
+
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:55px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:20px;
+    }
+
+    /* MAIN CONTENT */
+
+    .container{
+      max-width:1000px;
+      margin:auto;
+      padding:60px 20px;
+    }
+
+    .section{
+      background:white;
+      padding:35px;
+      margin-bottom:30px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .section h2{
+      color:#0b6e4f;
+      margin-bottom:20px;
+      font-size:32px;
+    }
+
+    .section p{
+      margin-bottom:15px;
+      font-size:18px;
+    }
+
+    /* MESSAGE BOX */
+
+    .quote-box{
+      background:#dff6ef;
+      border-left:8px solid #00a884;
+      padding:25px;
+      border-radius:12px;
+      margin-top:20px;
+      font-size:18px;
+    }
+
+    /* BUTTON */
+
+    .btn-area{
+      text-align:center;
+      margin-top:40px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#00a884;
+      color:white;
+      text-decoration:none;
+
+      padding:14px 28px;
+
+      border-radius:8px;
+
+      font-size:18px;
+
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#008f72;
+      transform:scale(1.05);
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0b6e4f;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      nav{
+        margin-top:10px;
+      }
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .section h2{
+        font-size:26px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo-container">
+
+      <img src="image/awarebhutan-logo.png"
+           alt="AwareBhutan Logo"
+           class="logo">
+
+      <span class="logo-text">
+
+        AwareBhutan
+
+      </span>
+
+    </div>
+
+    <nav>
+
+     <a href="index.html">Home</a>
+
+      <a href="about.html">About</a>
+
+      <a href="symptoms.html">Symptoms</a>
+
+      <a href="quiz.html">Quiz</a>
+
+      <a href="emergancy.html">Emergency</a>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div>
+
+      <h1>Why AwareBhutan Was Created</h1>
+
+      <p>
+        Supporting mental wellness and emotional wellbeing in Bhutan.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- MAIN CONTENT -->
+
+  <div class="container">
+
+    <!-- SECTION 1 -->
+
+    <div class="section">
+
+      <h2>🌱 Our Mission</h2>
+
+      <p>
+
+        AwareBhutan was created to spread awareness about mental health,
+        emotional wellbeing, stress, anxiety, and self-care among people in Bhutan.
+
+      </p>
+
+      <p>
+
+        Many young people, students, and adults struggle silently with stress,
+        pressure, loneliness, and emotional challenges without enough support
+        or safe spaces to talk openly.
+
+      </p>
+
+      <p>
+
+        This website was built to encourage understanding, reduce stigma,
+        and remind people that mental health matters just as much as physical health.
+
+      </p>
+
+    </div>
+
+    <!-- SECTION 2 -->
+
+    <div class="section">
+
+      <h2>💚 Why Mental Health Awareness Matters</h2>
+
+      <p>
+
+        Emotional struggles can affect anyone regardless of age, background,
+        or lifestyle. Sometimes people may feel overwhelmed by school,
+        relationships, work, social pressure, or personal challenges.
+
+      </p>
+
+      <p>
+
+        In Bhutan and around the world, many individuals feel afraid to ask for help
+        because of stigma or fear of judgment.
+
+      </p>
+
+      <p>
+
+        AwareBhutan aims to create a safe online space where users can learn,
+        reflect, and find supportive wellness resources.
+
+      </p>
+
+      <div class="quote-box">
+
+        “You are never alone. Reaching out for support is a sign of strength.”
+
+      </div>
+
+    </div>
+
+    <!-- SECTION 3 -->
+
+    <div class="section">
+
+      <h2>🧠 What This Website Offers</h2>
+
+      <p>
+
+        ✔ Wellness self-check quizzes
+
+      </p>
+
+      <p>
+
+        ✔ Mental health awareness information
+
+      </p>
+
+      <p>
+
+        ✔ Stress management and self-care guidance
+
+      </p>
+
+      <p>
+
+        ✔ Encouragement for healthy conversations
+
+      </p>
+
+      <p>
+
+        ✔ A safe and supportive digital environment
+
+      </p>
+
+    </div>
+
+    <!-- BUTTON -->
+
+    <div class="btn-area">
+
+      <a href="index.html" class="btn">
+
+        Back To Homepage
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+
+      © 2026 AwareBhutan | Supporting Mental Wellness In Bhutan
+
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
